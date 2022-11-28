@@ -5,11 +5,24 @@
     "registry": "https://registry.npmjs.org"
   },
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.11",
   "description": "React component preview markdown text in web browser. The minimal amount of CSS to replicate the GitHub Markdown style.",
   "homepage": "https://uiwjs.github.io/react-markdown-preview",
-  "main": "lib/index.js",
   "module": "esm/index.js",
+  "types": "esm/index.d.ts",
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./esm/index.js",
+        "require": "./lib/index.js"
+      },
+      "require": "./lib/index.js",
+      "import": "./esm/index.js"
+    },
+    "./esm/": "./esm/",
+    "./lib/": "./lib/",
+    "./markdown.css": "./markdown.css"
+  },
   "scripts": {
     "prepare": "npm run build && husky install",
     "doc": "kkt build --app-src ./website",

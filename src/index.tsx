@@ -10,11 +10,11 @@ import rehypeAttrs from 'rehype-attr';
 import rehypeIgnore from 'rehype-ignore';
 import rehypePrism from 'rehype-prism-plus';
 import rehypeRewrite, { getCodeString, RehypeRewriteOptions } from 'rehype-rewrite';
-import { octiconLink } from './nodes/octiconLink';
-import { copyElement } from './nodes/copy';
-import { useCopied } from './plugins/useCopied';
+import { octiconLink } from './nodes/octiconLink.js';
+import { copyElement } from './nodes/copy.js';
+import { useCopied } from './plugins/useCopied.js';
 
-import { reservedMeta } from './plugins/reservedMeta';
+import { reservedMeta } from './plugins/reservedMeta.js';
 
 export interface MarkdownPreviewProps extends Omit<Options, 'children'> {
   prefixCls?: string;
